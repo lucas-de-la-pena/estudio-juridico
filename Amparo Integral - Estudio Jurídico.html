@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="es-AR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amparo Integral | Estudio Jurídico Especializado - amparointegral.com.ar</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Cinzel', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#060a12',
+                            900: '#0a1128',
+                            850: '#0f1833',
+                            800: '#17223b',
+                            700: '#1e2d4d',
+                        },
+                        champagne: {
+                            300: '#f5e6c4',
+                            400: '#e5c158',
+                            500: '#d4af37',
+                            600: '#b89428',
+                            700: '#94751d',
+                        },
+                        slate: {
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom luxury dark aesthetics */
+        body {
+            background-color: #0a1128;
+            color: #cbd5e1;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #f5e6c4 0%, #d4af37 50%, #94751d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #b89428 100%);
+        }
+
+        .gold-gradient-bg:hover {
+            background: linear-gradient(135deg, #e5c158 0%, #d4af37 100%);
+        }
+
+        .luxury-card {
+            background: linear-gradient(180deg, rgba(23, 34, 59, 0.8) 0%, rgba(15, 24, 51, 0.95) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            backdrop-filter: blur(12px);
+        }
+
+        .luxury-card-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.05);
+        }
+
+        .luxury-card-glow:hover {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.18);
+            border-color: rgba(212, 175, 55, 0.45);
+        }
+
+        .featured-card-glow {
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.6);
+        }
+
+        .nav-glass {
+            background: rgba(10, 17, 40, 0.94);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #060a12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4af37;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e5c158;
+        }
+    </style>
+</head>
+<body class="selection:bg-champagne-500 selection:text-navy-950">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-navy-950 text-champagne-400 text-xs py-2 px-4 border-b border-champagne-500/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-3">
+                <span class="flex items-center gap-1.5 font-semibold tracking-wide">
+                    <i data-lucide="shield" class="w-3.5 h-3.5 text-champagne-500"></i>
+                    Amparo Integral &bull; <span class="text-slate-200">amparointegral.com.ar</span>
+                </span>
+                <span class="hidden md:inline text-navy-800">|</span>
+                <span class="hidden md:flex items-center gap-1.5 text-slate-300">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-champagne-500"></i>
+                    Atención Presencial en CABA & Consultas Virtuales en Todo el País
+                </span>
+            </div>
+            <div class="flex items-center gap-4 font-medium">
+                <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20busco%20asesoramiento%20con%20el%20Estudio%20Amparo%20Integral." target="_blank" class="hover:text-champagne-300 transition-colors flex items-center gap-1.5">
+                    <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
+                    <span>Consultas Directas: 11 1234-5678</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="sticky top-0 z-40 nav-glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-xl border border-champagne-500/40 bg-navy-950 flex items-center justify-center shadow-lg group-hover:border-champagne-400 transition-all">
+                        <i data-lucide="scale" class="w-6 h-6 text-champagne-500"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-xl sm:text-2xl font-black tracking-wider text-slate-100 block leading-none">
+                            AMPARO <span class="gold-gradient-text">INTEGRAL</span>
+                        </span>
+                        <span class="text-[9px] font-bold tracking-[0.25em] text-champagne-400 uppercase block mt-1">Estudio Jurídico</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="hidden lg:flex items-center gap-8">
+                    <a href="#inicio" class="text-xs font-bold uppercase tracking-widest text-slate-200 hover:text-champagne-400 transition-colors">Inicio</a>
+                    <a href="#servicios" class="text-xs font-bold uppercase tracking-widest text-champagne-400 flex items-center gap-1.5 hover:text-champagne-300 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-champagne-400 animate-ping"></span>
+                        Áreas de Servicio
+                    </a>
+                    <a href="#equipo" class="text-xs font-bold uppercase tracking-widest text-slate-200 hover:text-champagne-400 transition-colors">Titulares del Estudio</a>
+                    <a href="#contacto" class="text-xs font-bold uppercase tracking-widest text-slate-200 hover:text-champagne-400 transition-colors">Contacto</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden sm:flex items-center gap-4">
+                    <a href="#contacto" class="inline-flex items-center gap-2 gold-gradient-bg text-navy-950 px-5 py-2.5 rounded-xl font-extrabold text-xs uppercase tracking-wider shadow-md transition-all">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        <span>Solicitar Entrevista</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 text-champagne-400 hover:text-champagne-300 focus:outline-none" aria-label="Menu">
+                    <i data-lucide="menu" class="w-7 h-7"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-navy-900 border-b border-champagne-500/20 px-6 py-6 space-y-4">
+            <a href="#inicio" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Inicio</a>
+            <a href="#servicios" class="block text-xs font-bold uppercase tracking-wider text-champagne-400">Áreas de Servicio</a>
+            <a href="#equipo" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Abogadas Titulares</a>
+            <a href="#contacto" class="block text-xs font-bold uppercase tracking-wider text-slate-200">Contacto</a>
+            <div class="pt-2">
+                <a href="#contacto" class="w-full flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold px-4 py-3 rounded-xl text-xs uppercase tracking-wider">
+                    Solicitar Entrevista Legal
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO -->
+    <section id="inicio" class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-8 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-850 border border-champagne-500/30 text-champagne-400 text-xs font-bold tracking-wider uppercase">
+                        <i data-lucide="shield-check" class="w-4 h-4 text-champagne-500"></i>
+                        <span>Patrocinio Jurídico Riguroso & Atención Directa</span>
+                    </div>
+
+                    <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-black text-slate-100 tracking-tight leading-tight">
+                        Defendemos tus Derechos con <span class="gold-gradient-text">Firmeza y Eficiencia</span>
+                    </h1>
+
+                    <p class="text-sm sm:text-base text-slate-300 font-normal max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        En <strong class="text-champagne-400 font-semibold">Amparo Integral</strong> (`amparointegral.com.ar`), te acompañamos con atención personalizada para resolver de forma urgente tus problemas legales más complejos.
+                    </p>
+
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#servicios" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold px-7 py-4 rounded-xl shadow-lg text-xs uppercase tracking-widest transition-all">
+                            <i data-lucide="shield-alert" class="w-4 h-4"></i>
+                            <span>Ver Soluciones por Especialidad</span>
+                        </a>
+                        <a href="#equipo" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 border border-champagne-500/40 hover:border-champagne-400 text-champagne-300 bg-navy-900/80 font-bold px-7 py-4 rounded-xl text-xs uppercase tracking-widest transition-all">
+                            <i data-lucide="users" class="w-4 h-4 text-champagne-400"></i>
+                            <span>Conocer a las Titulares</span>
+                        </a>
+                    </div>
+
+                    <div class="pt-8 border-t border-champagne-500/15 grid grid-cols-3 gap-6 text-center lg:text-left">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-extrabold text-champagne-400">3</div>
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1 font-semibold">Abogadas Titulares</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-extrabold text-champagne-400">Urgente</div>
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1 font-semibold">Medidas Cautelares</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-extrabold text-champagne-400">100%</div>
+                            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-1 font-semibold">Trato Personalizado</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Global Multi-Service Hook Card in Hero -->
+                <div class="lg:col-span-6">
+                    <div class="luxury-card rounded-3xl p-6 sm:p-8 featured-card-glow space-y-6 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-champagne-500/10 rounded-full blur-2xl"></div>
+
+                        <div class="flex items-center gap-3 border-b border-champagne-500/20 pb-4">
+                            <div class="w-12 h-12 rounded-2xl bg-champagne-500/20 border border-champagne-500/40 flex items-center justify-center shrink-0">
+                                <i data-lucide="help-circle" class="w-6 h-6 text-champagne-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-champagne-400">Identificá tu Caso</span>
+                                <h2 class="font-serif text-lg sm:text-xl font-bold text-slate-100 mt-0.5">¿Estás atravesando alguna de estas situaciones?</h2>
+                            </div>
+                        </div>
+
+                        <!-- Hook Scenarios Grid -->
+                        <div class="space-y-3.5 text-xs">
+                            
+                            <!-- Scenario 1: Estafas Virtuales -->
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/25 hover:border-champagne-400/50 transition-all">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-champagne-500/10 text-champagne-400 shrink-0 mt-0.5">
+                                        <i data-lucide="smartphone-nfc" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-champagne-300 font-semibold block mb-0.5">Estafas Bancarias / Ciberdelitos:</strong>
+                                        <p class="text-slate-300 leading-snug">
+                                            "Sufrí una estafa virtual, sacaron un crédito no solicitado a mi nombre o me robaron el celular con mis claves bancarias."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scenario 2: Laboral y ART -->
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/25 hover:border-champagne-400/50 transition-all">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-champagne-500/10 text-champagne-400 shrink-0 mt-0.5">
+                                        <i data-lucide="briefcase" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-champagne-300 font-semibold block mb-0.5">Conflicto Laboral / Accidentes ART:</strong>
+                                        <p class="text-slate-300 leading-snug">
+                                            "Me negaron tareas, trabajo no registrado ('en negro'), sufrí un accidente de trabajo o la A.R.T. no me reconoce una incapacidad."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scenario 3: Inmuebles y Escrituración -->
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/25 hover:border-champagne-400/50 transition-all">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-champagne-500/10 text-champagne-400 shrink-0 mt-0.5">
+                                        <i data-lucide="home" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-champagne-300 font-semibold block mb-0.5">Problemas Inmobiliarios / Escrituración:</strong>
+                                        <p class="text-slate-300 leading-snug">
+                                            "Compré a plazos un inmueble por boleto y no me dan la escritura, la constructora quebró o vendieron mi departamento a un tercero."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Scenario 4: Amparos de Salud -->
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/25 hover:border-champagne-400/50 transition-all">
+                                <div class="flex items-start gap-3">
+                                    <div class="p-1.5 rounded-lg bg-champagne-500/10 text-champagne-400 shrink-0 mt-0.5">
+                                        <i data-lucide="heart-pulse" class="w-4 h-4"></i>
+                                    </div>
+                                    <div>
+                                        <strong class="text-champagne-300 font-semibold block mb-0.5">Salud y Cobertura Médica:</strong>
+                                        <p class="text-slate-300 leading-snug">
+                                            "La prepaga u obra social me niega un medicamento esencial, prótesis o tratamiento urgente."
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Action Buttons inside Card -->
+                        <div class="flex flex-col sm:flex-row gap-3 pt-1">
+                            <a href="#servicios" class="flex-1 flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold py-3.5 px-4 rounded-xl text-xs uppercase tracking-wider shadow-lg transition-all hover:opacity-95">
+                                <i data-lucide="arrow-down-circle" class="w-4 h-4"></i>
+                                <span>Ver Detalle de los Servicios</span>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20necesito%20asesoramiento%20jur%C3%ADdico%20urgente%20por%20mi%20caso." target="_blank" class="flex items-center justify-center gap-2 border border-champagne-500/40 text-champagne-300 hover:bg-navy-800 font-bold py-3.5 px-4 rounded-xl text-xs uppercase tracking-wider transition-all">
+                                <i data-lucide="message-square" class="w-4 h-4 text-champagne-400"></i>
+                                <span>Consultar Caso</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: ÁREAS DE SERVICIOS (DETALLE EN PROFUNDIDAD) -->
+    <section id="servicios" class="py-24 bg-navy-900 border-t border-champagne-500/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-champagne-400 font-bold text-xs tracking-[0.25em] uppercase border-b border-champagne-500/40 pb-1">Soluciones Jurídicas Integrales</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-100">Detalle de Servicios por Especialidad</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Afrontamos cada reclamo con la máxima rigurosidad procesal. Conocé en profundidad las acciones legales que iniciamos para resguardar tus derechos y tu patrimonio.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                
+                <!-- CARD 1: ESTAFAS BANCARIAS VIRTUALES -->
+                <div class="luxury-card rounded-3xl p-8 lg:p-10 featured-card-glow relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 bg-champagne-500 text-navy-950 text-[10px] font-extrabold uppercase tracking-widest py-1.5 px-4 rounded-bl-2xl">
+                        MÁXIMO FOCO / ATENCIÓN URGENTE
+                    </div>
+
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl bg-champagne-500/20 border border-champagne-500/50 flex items-center justify-center shrink-0">
+                            <i data-lucide="shield-alert" class="w-7 h-7 text-champagne-400"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">Ciberdelitos & Defensa del Consumidor</span>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-100 mt-1">¿Sufriste un ciberdelito o estafa bancaria?</h3>
+                        </div>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                        Brindamos asesoramiento e intervención judicial inmediata ante fraudes electrónicos, suplantación de identidad en aplicaciones bancarias y violación de seguridad en plataformas digitales.
+                    </p>
+
+                    <div class="space-y-3 mb-8">
+                        <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                            <div class="text-xs">
+                                <strong class="text-slate-100 font-semibold block">Estafas virtuales y phishing:</strong>
+                                <span class="text-slate-400">Acciones legales contra el banco por omisión en el deber de seguridad objetiva.</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                            <div class="text-xs">
+                                <strong class="text-slate-100 font-semibold block">Créditos preaprobados no solicitados:</strong>
+                                <span class="text-slate-400">Cese automático de débitos mediante cautelares y cancelación de la deuda fraudulenta.</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                            <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                            <div class="text-xs">
+                                <strong class="text-slate-100 font-semibold block">Vaciamiento de cuentas y robo de dispositivo:</strong>
+                                <span class="text-slate-400">Reclamación de reintegro de fondos, daño moral y sanciones por daños punitivos.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20sufr%C3%AD%20una%20estafa%20virtual/bancaria%20y%20necesito%20asesoramiento%20especializado." target="_blank" class="w-full flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold py-3.5 px-6 rounded-xl text-xs uppercase tracking-widest shadow-md transition-all">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Asesorarme sobre Estafas Virtuales</span>
+                    </a>
+                </div>
+
+                <!-- CARD 2: DERECHO LABORAL -->
+                <div class="luxury-card rounded-3xl p-8 lg:p-10 luxury-card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-navy-800 border border-champagne-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="briefcase" class="w-7 h-7 text-champagne-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">Derecho Laboral & Reclamos ART</span>
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-100 mt-1">¿Tenés inconvenientes laborales o sufriste un despido?</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                            Protegemos tus derechos en el ámbito del trabajo. Te acompañamos desde el primer telegrama hasta la conciliación o sentencia judicial.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Despidos e Indemnizaciones:</strong>
+                                    <span class="text-slate-400">Cálculo minucioso de liquidación final por despido sin causa, indirecto o negativa de tareas.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Trabajo deficientemente registrado ("en negro"):</strong>
+                                    <span class="text-slate-400">Intimación formal para regularización de fecha de ingreso y salario real.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Accidentes laborales y reclamos ante la ART:</strong>
+                                    <span class="text-slate-400">Impugnación de altas médicas prematuras, determinación de incapacidad y cobro indemnizatorio.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20tengo%20una%20consulta%20por%20un%20tema%20Laboral%20o%20Despido." target="_blank" class="w-full flex items-center justify-center gap-2 border border-champagne-500/40 text-champagne-300 hover:bg-champagne-500 hover:text-navy-950 font-extrabold py-3.5 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Asesorarme sobre Derecho Laboral</span>
+                    </a>
+                </div>
+
+                <!-- CARD 3: DERECHO REGISTRAL E INMOBILIARIO -->
+                <div class="luxury-card rounded-3xl p-8 lg:p-10 luxury-card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-navy-800 border border-champagne-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="home" class="w-7 h-7 text-champagne-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">Derecho Registral e Inmobiliario</span>
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-100 mt-1">¿Inconvenientes con la compra o escrituración de tu propiedad?</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                            Aseguramos tu inversión patrimonial mediante acciones legales efectivas frente a demoras en entregas, falta de escritura o irregularidades dominiales.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Juicios de Escrituración:</strong>
+                                    <span class="text-slate-400">Demandas judicialmente fundadas en boletos de compraventa contra vendedores o titular registral reacio.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Fideicomisos e inmobiliarias en quiebra:</strong>
+                                    <span class="text-slate-400">Auditoría de contratos, reclamos por doble venta y penalidades por incumplimiento contractual.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Saneamiento y Regularización Dominial:</strong>
+                                    <span class="text-slate-400">Informes de dominio, inhibiciones, Usucapión y trámites ante Registros de la Propiedad.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20necesito%20asesoramiento%20sobre%20Escrituraci%C3%B3n,%20Boleto%20o%20Fideicomiso." target="_blank" class="w-full flex items-center justify-center gap-2 border border-champagne-500/40 text-champagne-300 hover:bg-champagne-500 hover:text-navy-950 font-extrabold py-3.5 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Asesorarme sobre Derecho Registral</span>
+                    </a>
+                </div>
+
+                <!-- CARD 4: AMPAROS DE SALUD Y COBERTURA MÉDICA -->
+                <div class="luxury-card rounded-3xl p-8 lg:p-10 luxury-card-glow flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-navy-800 border border-champagne-500/30 flex items-center justify-center shrink-0">
+                                <i data-lucide="heart-pulse" class="w-7 h-7 text-champagne-400"></i>
+                            </div>
+                            <div>
+                                <span class="text-xs font-bold uppercase tracking-widest text-champagne-400">Amparos de Salud Urgentes</span>
+                                <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-100 mt-1">¿Tu obra social o prepaga te niega la cobertura?</h3>
+                            </div>
+                        </div>
+
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                            Promovemos amparos de salud urgentes para garantizar la provisión inmediata de prestaciones médicas, tratamientos oncológicos y prótesis.
+                        </p>
+
+                        <div class="space-y-3 mb-8">
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Amparos de Salud con Cautelar:</strong>
+                                    <span class="text-slate-400">Órdenes judiciales rápidas para cobertura del 100% en medicamentos de alto costo e intervenciones.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Aumentos desmedidos o negativas de afiliación:</strong>
+                                    <span class="text-slate-400">Defensa contra la rescisión arbitraria del contrato por enfermedades preexistentes o edad.</span>
+                                </div>
+                            </div>
+
+                            <div class="p-3.5 rounded-xl bg-navy-950/80 border border-champagne-500/20 flex items-start gap-3">
+                                <i data-lucide="check" class="w-4 h-4 text-champagne-400 shrink-0 mt-0.5"></i>
+                                <div class="text-xs">
+                                    <strong class="text-slate-100 font-semibold block">Tratamientos por Discapacidad:</strong>
+                                    <span class="text-slate-400">Reclamo integral según el Certificado Único de Discapacidad (CUD).</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20necesito%20tramitar%20un%20Amparo%20de%20Salud%20por%20negativa%20de%20cobertura." target="_blank" class="w-full flex items-center justify-center gap-2 border border-champagne-500/40 text-champagne-300 hover:bg-champagne-500 hover:text-navy-950 font-extrabold py-3.5 px-6 rounded-xl text-xs uppercase tracking-widest transition-all">
+                        <i data-lucide="message-square" class="w-4 h-4"></i>
+                        <span>Asesorarme sobre Amparos de Salud</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: EL EQUIPO / TITULARES DEL ESTUDIO -->
+    <section id="equipo" class="py-24 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950 border-t border-champagne-500/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-champagne-400 font-bold text-xs tracking-[0.25em] uppercase border-b border-champagne-500/40 pb-1">Excelencia Jurídica</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-extrabold text-slate-100">Abogadas Titulares del Estudio</h2>
+                <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                    Cada caso es patrocinado de manera directa y personalizada por la profesional titular especialista en la materia, garantizando compromiso técnico y confidencialidad.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- TITULAR 1: Dra. Ingrid Maciel -->
+                <div class="luxury-card rounded-3xl p-8 luxury-card-glow flex flex-col justify-between relative group">
+                    <div>
+                        <div class="text-center pb-6 border-b border-champagne-500/20 mb-6">
+                            <!-- Monogram Icon Avatar -->
+                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-champagne-600 via-champagne-400 to-champagne-300 p-0.5 mx-auto mb-4 shadow-xl">
+                                <div class="w-full h-full bg-navy-950 rounded-[14px] flex items-center justify-center text-champagne-400 font-serif text-3xl font-extrabold">
+                                    IM
+                                </div>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Dra. Ingrid Maciel</h3>
+                            <span class="inline-block mt-2 px-3 py-1 bg-navy-800 border border-champagne-500/30 text-champagne-400 text-[11px] font-bold rounded-full uppercase tracking-wider">
+                                Derecho Laboral & ART
+                            </span>
+                        </div>
+
+                        <div class="space-y-4 text-xs text-slate-300 leading-relaxed mb-6">
+                            <p>
+                                <strong class="text-slate-100">Semblanza Profesional:</strong> Abogada graduada con mención de honor, dedicada exclusivamente al patrocinio laboral y reclamos por indemnizaciones, despido directo/indirecto e infortunios de trabajo.
+                            </p>
+                            <p>
+                                Destacada trayectoria en instancias de conciliación laboral previa (SECLO, Ministerio de Trabajo) e intervención litigiosa en fueros laborales.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 mb-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-champagne-400 block">Especialidades Titulares:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Liquidaciones</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Seclo</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Comisiones Médicas SRT</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20Dra.%20Ingrid%20Maciel,%20busco%20asesoramiento%20por%20un%20asunto%20Laboral." target="_blank" class="w-full flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Contactar a Dra. Maciel</span>
+                    </a>
+                </div>
+
+                <!-- TITULAR 2: Dra. María Giménez Solano -->
+                <div class="luxury-card rounded-3xl p-8 luxury-card-glow flex flex-col justify-between relative group">
+                    <div>
+                        <div class="text-center pb-6 border-b border-champagne-500/20 mb-6">
+                            <!-- Monogram Icon Avatar -->
+                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-champagne-600 via-champagne-400 to-champagne-300 p-0.5 mx-auto mb-4 shadow-xl">
+                                <div class="w-full h-full bg-navy-950 rounded-[14px] flex items-center justify-center text-champagne-400 font-serif text-3xl font-extrabold">
+                                    GS
+                                </div>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Dra. María Giménez Solano</h3>
+                            <span class="inline-block mt-2 px-3 py-1 bg-navy-800 border border-champagne-500/30 text-champagne-400 text-[11px] font-bold rounded-full uppercase tracking-wider">
+                                Registral e Inmobiliario
+                            </span>
+                        </div>
+
+                        <div class="space-y-4 text-xs text-slate-300 leading-relaxed mb-6">
+                            <p>
+                                <strong class="text-slate-100">Semblanza Profesional:</strong> Especialista en ingeniería jurídica contractual aplicada a bienes inmuebles, fideicomisos al pozo y saneamiento de títulos en Registros de la Propiedad.
+                            </p>
+                            <p>
+                                Amplia experiencia en procesos de escrituración judicial por boletos de compraventa y resolución de controversias entre desarrolladoras y adquirentes.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 mb-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-champagne-400 block">Especialidades Titulares:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Juicios de Escrituración</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Fideicomisos</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Usucapión</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20Dra.%20Mar%C3%ADa%20Gim%C3%A9nez%20Solano,%20busco%20asesoramiento%20por%20escrituraci%C3%B3n%20o%20inmuebles." target="_blank" class="w-full flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Contactar a Dra. Giménez Solano</span>
+                    </a>
+                </div>
+
+                <!-- TITULAR 3: Dra. Amanda Gil López -->
+                <div class="luxury-card rounded-3xl p-8 featured-card-glow flex flex-col justify-between relative group">
+                    <div>
+                        <div class="text-center pb-6 border-b border-champagne-500/20 mb-6">
+                            <!-- Monogram Icon Avatar -->
+                            <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-champagne-600 via-champagne-400 to-champagne-300 p-0.5 mx-auto mb-4 shadow-xl">
+                                <div class="w-full h-full bg-navy-950 rounded-[14px] flex items-center justify-center text-champagne-400 font-serif text-3xl font-extrabold">
+                                    GL
+                                </div>
+                            </div>
+                            <h3 class="font-serif text-xl font-bold text-slate-100">Dra. Amanda Gil López</h3>
+                            <span class="inline-block mt-2 px-3 py-1 bg-navy-800 border border-champagne-500/30 text-champagne-400 text-[11px] font-bold rounded-full uppercase tracking-wider">
+                                Ciberdelitos & Consumidor
+                            </span>
+                        </div>
+
+                        <div class="space-y-4 text-xs text-slate-300 leading-relaxed mb-6">
+                            <p>
+                                <strong class="text-slate-100">Semblanza Profesional:</strong> Referente litigante en el fuero de Defensa del Consumidor con orientación en delitos cibernéticos bancarios y medidas cautelares de amparo de salud.
+                            </p>
+                            <p>
+                                Especializada en la interposición de medidas cautelares urgentes que frenan el débito automático de préstamos no solicitados otorgados por ciberestafas.
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 mb-6">
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-champagne-400 block">Especialidades Titulares:</span>
+                            <div class="flex flex-wrap gap-1.5">
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Estafas Virtuales</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Phishing Bancario</span>
+                                <span class="px-2.5 py-1 rounded-md bg-navy-950 text-slate-300 text-[11px] border border-champagne-500/20">Amparos de Salud</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20Dra.%20Amanda%20Gil%20L%C3%B3pez,%20necesito%20asesoramiento%20urgente%20por%20una%20estafa%20virtual%20o%20salud." target="_blank" class="w-full flex items-center justify-center gap-2 gold-gradient-bg text-navy-950 font-extrabold py-3 px-4 rounded-xl text-xs uppercase tracking-wider transition-all">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                        <span>Contactar a Dra. Gil López</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: CONTACTO FORMULARIO -->
+    <section id="contacto" class="py-24 bg-navy-950 border-t border-champagne-500/15">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="text-champagne-400 font-bold text-xs tracking-[0.25em] uppercase border-b border-champagne-500/40 pb-1">Coordinar Entrevista</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-100">Contacto con Secretaría Legal</h2>
+                    <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+                        Envianos el detalle de tu caso para ser derivado a la abogada titular correspondiente. Atendemos de forma presencial en CABA y de forma remota a todo el país.
+                    </p>
+
+                    <div class="space-y-4 pt-2 text-xs">
+                        <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-900 border border-champagne-500/20">
+                            <i data-lucide="globe" class="w-5 h-5 text-champagne-400"></i>
+                            <div>
+                                <span class="text-slate-400 uppercase tracking-wider text-[10px] block">Dominio Oficial</span>
+                                <strong class="text-slate-100 text-sm">amparointegral.com.ar</strong>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-900 border border-champagne-500/20">
+                            <i data-lucide="mail" class="w-5 h-5 text-champagne-400"></i>
+                            <div>
+                                <span class="text-slate-400 uppercase tracking-wider text-[10px] block">Correo Electrónico</span>
+                                <strong class="text-slate-100 text-sm">contacto@amparointegral.com.ar</strong>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3.5 rounded-xl bg-navy-900 border border-champagne-500/20">
+                            <i data-lucide="phone" class="w-5 h-5 text-champagne-400"></i>
+                            <div>
+                                <span class="text-slate-400 uppercase tracking-wider text-[10px] block">Atención Telefónica / WhatsApp</span>
+                                <strong class="text-slate-100 text-sm">+54 9 11 1234-5678</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="luxury-card rounded-3xl p-8 border border-champagne-500/30">
+                        <form id="contact-form" class="space-y-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-champagne-400 mb-1.5">Nombre y Apellido *</label>
+                                <input type="text" id="form-name" required placeholder="Ej: Martin Gómez" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-champagne-500/30 text-slate-100 text-xs focus:outline-none focus:border-champagne-400">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase tracking-wider text-champagne-400 mb-1.5">Teléfono Móvil (WhatsApp) *</label>
+                                    <input type="tel" id="form-phone" required placeholder="Ej: 11 1234 5678" class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-champagne-500/30 text-slate-100 text-xs focus:outline-none focus:border-champagne-400">
+                                </div>
+                                <div>
+                                    <label class="block text-[10px] font-bold uppercase tracking-wider text-champagne-400 mb-1.5">Materia / Especialista *</label>
+                                    <select id="form-specialist" required class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-champagne-500/30 text-slate-100 text-xs focus:outline-none focus:border-champagne-400">
+                                        <option value="Estafas Virtuales / Ciberdelitos">Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos</option>
+                                        <option value="Derecho Laboral / ART">Dra. Ingrid Maciel - Derecho Laboral / ART</option>
+                                        <option value="Derecho Registral / Inmuebles">Dra. María Giménez Solano - Escrituración / Inmuebles</option>
+                                        <option value="Amparos de Salud">Amparos de Salud / Cobertura Médica</option>
+                                        <option value="Consulta General">Consulta Jurídica General</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-wider text-champagne-400 mb-1.5">Resumen de la Consulta *</label>
+                                <textarea id="form-message" rows="4" required placeholder="Sintetizá brevemente lo ocurrido..." class="w-full px-4 py-3 rounded-xl bg-navy-900 border border-champagne-500/30 text-slate-100 text-xs focus:outline-none focus:border-champagne-400"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-extrabold py-4 px-6 rounded-xl text-xs uppercase tracking-widest shadow-lg transition-all hover:opacity-95">
+                                Enviar Consulta a Secretaría
+                            </button>
+                        </form>
+
+                        <div id="form-success" class="hidden text-center py-8 space-y-3">
+                            <div class="w-12 h-12 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center mx-auto">
+                                <i data-lucide="check" class="w-6 h-6"></i>
+                            </div>
+                            <h4 class="font-serif font-bold text-slate-100 text-base">Consulta Recibida Exitosamente</h4>
+                            <p class="text-xs text-slate-300">Un integrante de Secretaría Legal tomará contacto a la brevedad.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 py-10 border-t border-champagne-500/20 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-3">
+                <i data-lucide="scale" class="w-5 h-5 text-champagne-400"></i>
+                <span class="font-serif text-sm font-bold text-slate-100">AMPARO INTEGRAL</span>
+            </div>
+            <p>&copy; 2026 amparointegral.com.ar &bull; Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SECTION 4: BOT DE CHAT FLOTANTE JAVASCRIPT ("Asistente Amparo Integral") -->
+    <div id="chat-widget" class="fixed bottom-6 right-6 z-50">
+        
+        <!-- Toggle Button -->
+        <button id="chat-toggle-btn" class="gold-gradient-bg text-navy-950 p-4 rounded-full shadow-2xl flex items-center justify-center transition-transform hover:scale-110 focus:outline-none relative border-2 border-navy-950">
+            <i data-lucide="message-square" id="chat-icon-open" class="w-6 h-6"></i>
+            <i data-lucide="x" id="chat-icon-close" class="w-6 h-6 hidden"></i>
+            <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-champagne-300 rounded-full border-2 border-navy-950 animate-pulse"></span>
+        </button>
+
+        <!-- Chat Window -->
+        <div id="chat-box" class="hidden absolute bottom-16 right-0 w-[90vw] sm:w-[380px] luxury-card rounded-3xl border border-champagne-500/40 shadow-2xl overflow-hidden flex flex-col h-[520px]">
+            
+            <!-- Chat Header -->
+            <div class="bg-navy-950 px-5 py-4 border-b border-champagne-500/20 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 rounded-full gold-gradient-bg text-navy-950 flex items-center justify-center font-serif font-bold text-xs">
+                        AI
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-slate-100 text-xs">Asistente Amparo Integral</h4>
+                        <span class="text-[10px] text-champagne-400 flex items-center gap-1">
+                            <span class="w-1.5 h-1.5 rounded-full bg-champagne-400"></span>
+                            Respuesta Automatizada 24/7
+                        </span>
+                    </div>
+                </div>
+                <button id="chat-close-header" class="text-slate-400 hover:text-champagne-400 text-xs">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+
+            <!-- Chat Messages Body -->
+            <div id="chat-messages" class="p-4 flex-1 overflow-y-auto space-y-3 text-xs bg-navy-900/60">
+                <!-- Welcome Message from Bot -->
+                <div class="flex items-start gap-2 max-w-[85%]">
+                    <div class="w-6 h-6 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center shrink-0 text-[10px] font-bold">AI</div>
+                    <div class="p-3 rounded-2xl rounded-tl-none bg-navy-800 border border-champagne-500/20 text-slate-200 space-y-2">
+                        <p>¡Hola! Bienvenido a <strong>Amparo Integral</strong> (`amparointegral.com.ar`).</p>
+                        <p>Por favor, indicá la opción deseada para orientarte con la abogada titular especialista:</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Options Buttons Container -->
+                <div id="chat-options" class="space-y-2 pt-1 pl-8">
+                    <button onclick="handleBotOption(1)" class="w-full text-left p-2.5 rounded-xl bg-navy-950 border border-champagne-500/30 text-slate-200 hover:border-champagne-400 hover:text-champagne-300 transition-all font-medium flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
+                        <span>Quiero realizar una consulta general</span>
+                    </button>
+
+                    <button onclick="handleBotOption(2)" class="w-full text-left p-2.5 rounded-xl bg-navy-950 border border-champagne-500/40 text-champagne-300 hover:border-champagne-400 transition-all font-bold flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full gold-gradient-bg text-navy-950 flex items-center justify-center text-[10px] font-extrabold shrink-0">2</span>
+                        <span>Fui víctima de una estafa virtual / ciberdelito</span>
+                    </button>
+
+                    <button onclick="handleBotOption(3)" class="w-full text-left p-2.5 rounded-xl bg-navy-950 border border-champagne-500/30 text-slate-200 hover:border-champagne-400 hover:text-champagne-300 transition-all font-medium flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
+                        <span>Tengo un problema laboral o de ART</span>
+                    </button>
+
+                    <button onclick="handleBotOption(4)" class="w-full text-left p-2.5 rounded-xl bg-navy-950 border border-champagne-500/30 text-slate-200 hover:border-champagne-400 hover:text-champagne-300 transition-all font-medium flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">4</span>
+                        <span>Necesito escriturar un inmueble / fideicomiso</span>
+                    </button>
+
+                    <button onclick="handleBotOption(5)" class="w-full text-left p-2.5 rounded-xl bg-navy-950 border border-champagne-500/30 text-slate-200 hover:border-champagne-400 hover:text-champagne-300 transition-all font-medium flex items-center gap-2">
+                        <span class="w-5 h-5 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">5</span>
+                        <span>Cobertura médica / Amparo de Salud</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Footer Input Simulation -->
+            <div class="p-3 bg-navy-950 border-t border-champagne-500/20">
+                <form id="chat-input-form" class="flex gap-2">
+                    <input type="text" id="chat-input-field" placeholder="Escribí un mensaje o número..." class="flex-1 px-3 py-2 rounded-xl bg-navy-900 border border-champagne-500/30 text-slate-100 text-xs focus:outline-none focus:border-champagne-400">
+                    <button type="submit" class="gold-gradient-bg text-navy-950 p-2 rounded-xl">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Submission Handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('form-success').classList.remove('hidden');
+        });
+
+        // ==========================================
+        // CHATBOT WIDGET LOGIC (JAVASCRIPT)
+        // ==========================================
+        const chatToggleBtn = document.getElementById('chat-toggle-btn');
+        const chatBox = document.getElementById('chat-box');
+        const chatIconOpen = document.getElementById('chat-icon-open');
+        const chatIconClose = document.getElementById('chat-icon-close');
+        const chatCloseHeader = document.getElementById('chat-close-header');
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInputForm = document.getElementById('chat-input-form');
+        const chatInputField = document.getElementById('chat-input-field');
+
+        function toggleChat() {
+            chatBox.classList.toggle('hidden');
+            chatIconOpen.classList.toggle('hidden');
+            chatIconClose.classList.toggle('hidden');
+        }
+
+        chatToggleBtn.addEventListener('click', toggleChat);
+        chatCloseHeader.addEventListener('click', toggleChat);
+
+        // Helper to append User message
+        function appendUserMessage(text) {
+            const div = document.createElement('div');
+            div.className = "flex justify-end";
+            div.innerHTML = `
+                <div class="p-3 rounded-2xl rounded-tr-none gold-gradient-bg text-navy-950 font-semibold max-w-[80%] text-xs shadow-md">
+                    ${text}
+                </div>
+            `;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Helper to append Bot response
+        function appendBotMessage(htmlContent) {
+            const div = document.createElement('div');
+            div.className = "flex items-start gap-2 max-w-[85%]";
+            div.innerHTML = `
+                <div class="w-6 h-6 rounded-full bg-champagne-500/20 text-champagne-400 flex items-center justify-center shrink-0 text-[10px] font-bold">AI</div>
+                <div class="p-3 rounded-2xl rounded-tl-none bg-navy-800 border border-champagne-500/20 text-slate-200 space-y-2 text-xs">
+                    ${htmlContent}
+                </div>
+            `;
+            chatMessages.appendChild(div);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Handle Bot Option Selection
+        function handleBotOption(optionNumber) {
+            const options = {
+                1: {
+                    userText: "1. Quiero realizar una consulta general",
+                    botHtml: `
+                        <p><strong>Atención General de Secretaría:</strong></p>
+                        <p>Podés comunicarte directamente con nuestro equipo legal para derivar tu caso a la especialista correspondiente.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20deseo%20realizar%20una%20consulta%20general%20en%20el%20Estudio%20Amparo%20Integral." target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Abrir WhatsApp Secretaria
+                        </a>
+                    `
+                },
+                2: {
+                    userText: "2. Fui víctima de una estafa virtual / ciberdelito",
+                    botHtml: `
+                        <p><strong>Asistencia de Urgencia - Dra. Amanda Gil López:</strong></p>
+                        <p>Especialista en suspensión cautelar inmediata de débitos automáticos por créditos no solicitados y ciberfraude.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=URGENTE:%20Fui%20v%C3%ADctima%20de%20una%20estafa%20virtual%20y%20necesito%20asesoramiento%20con%20la%20Dra.%20Amanda%20Gil%20L%C3%B3pez." target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Contactar con Dra. Gil López
+                        </a>
+                    `
+                },
+                3: {
+                    userText: "3. Tengo un problema laboral o de ART",
+                    botHtml: `
+                        <p><strong>Derecho Laboral - Dra. Ingrid Maciel:</strong></p>
+                        <p>Atención para despidos, trabajo no registrado, liquidaciones e infortunios de trabajo ante Comisiones Médicas SRT.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20Dra.%20Ingrid%20Maciel,%20tengo%20una%20consulta%20por%20un%20asunto%20Laboral/ART." target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Contactar con Dra. Maciel
+                        </a>
+                    `
+                },
+                4: {
+                    userText: "4. Necesito escriturar un inmueble / fideicomiso",
+                    botHtml: `
+                        <p><strong>Derecho Registral e Inmobiliario - Dra. María Giménez Solano:</strong></p>
+                        <p>Asesoramiento en demandas de escrituración con boleto de compraventa y revisión de contratos de fideicomiso.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola%20Dra.%20Mar%C3%ADa%20Gim%C3%A9nez%20Solano,%20necesito%20asesoramiento%20por%20escrituraci%C3%B3n/inmuebles." target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Contactar con Dra. Giménez Solano
+                        </a>
+                    `
+                },
+                5: {
+                    userText: "5. Cobertura médica / Amparo de Salud",
+                    botHtml: `
+                        <p><strong>Amparos de Salud Urgentes:</strong></p>
+                        <p>Iniciación de medidas de cautela judicial ante negativas de tratamiento, aumentos o medicamentos por obras sociales/prepagas.</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20necesito%20asesoramiento%20urgente%20por%20un%20Amparo%20de%20Salud." target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Consultar por Amparo de Salud
+                        </a>
+                    `
+                }
+            };
+
+            const selected = options[optionNumber];
+            if (selected) {
+                appendUserMessage(selected.userText);
+                setTimeout(() => {
+                    appendBotMessage(selected.botHtml);
+                }, 300);
+            }
+        }
+
+        // Form Submit Simulation in Chat
+        chatInputForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const text = chatInputField.value.trim();
+            if (!text) return;
+
+            appendUserMessage(text);
+            chatInputField.value = '';
+
+            const num = parseInt(text);
+            if (num >= 1 && num <= 5) {
+                handleBotOption(num);
+            } else {
+                setTimeout(() => {
+                    appendBotMessage(`
+                        <p>He recibido tu consulta: "<em>${text}</em>".</p>
+                        <p>Para brindarte una respuesta precisa, por favor seleccioná una de las opciones del menú o escribí directamente a nuestra Secretaría:</p>
+                        <a href="https://api.whatsapp.com/send?phone=5491112345678&text=Hola,%20mi%20consulta%20es:%20${encodeURIComponent(text)}" target="_blank" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Contactar por WhatsApp
+                        </a>
+                    `);
+                }, 400);
+            }
+        });
+    </script>
+</body>
+</html>
