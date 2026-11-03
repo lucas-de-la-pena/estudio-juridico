@@ -123,6 +123,28 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #55637a;
         }
+
+        @keyframes chat-notification-blink {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(237, 211, 131, 0);
+                border-color: rgba(203, 213, 225, 0.08);
+            }
+            50% {
+                box-shadow: 0 0 0 4px rgba(237, 211, 131, 0.35);
+                border-color: rgba(237, 211, 131, 0.85);
+            }
+        }
+
+        .chat-notification-blink {
+            animation: chat-notification-blink 0.55s ease-in-out 3;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .chat-notification-blink {
+                animation: none;
+                box-shadow: 0 0 0 3px rgba(237, 211, 131, 0.45);
+            }
+        }
     </style>
 </head>
 <body class="selection:bg-champagne-500 selection:text-navy-950">
@@ -134,10 +156,6 @@
                 <i data-lucide="map-pin" class="w-3.5 h-3.5 text-champagne-400"></i>
                 Atención presencial en CABA & consultas virtuales en todo el país
             </span>
-            <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20al%20Estudio%20Amparo%20Integral&body=Hola%2C%20busco%20asesoramiento%20con%20el%20Estudio%20Amparo%20Integral." class="hover:text-champagne-300 transition-colors flex items-center gap-1.5">
-                <i data-lucide="mail" class="w-3.5 h-3.5"></i>
-                <span>consultas.amparointegral@gmail.com</span>
-            </a>
         </div>
     </div>
 
@@ -169,7 +187,7 @@
 
                 <!-- Action Button -->
                 <div class="hidden sm:flex items-center gap-4">
-                    <a href="#contacto" class="inline-flex items-center gap-2 border border-champagne-400/50 text-champagne-300 hover:bg-champagne-400 hover:text-navy-950 px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors">
+                    <a href="#contacto" data-especialista="Consulta General" class="inline-flex items-center gap-2 border border-champagne-400/50 text-champagne-300 hover:bg-champagne-400 hover:text-navy-950 px-5 py-2.5 rounded-lg font-semibold text-sm transition-colors">
                         <span>Solicitar entrevista</span>
                     </a>
                 </div>
@@ -188,7 +206,7 @@
             <a href="#equipo" class="block text-sm text-slate-300">Equipo</a>
             <a href="#contacto" class="block text-sm text-slate-300">Contacto</a>
             <div class="pt-2">
-                <a href="#contacto" class="w-full flex items-center justify-center border border-champagne-400/50 text-champagne-300 px-4 py-3 rounded-lg text-sm font-semibold">
+                <a href="#contacto" data-especialista="Consulta General" class="w-full flex items-center justify-center border border-champagne-400/50 text-champagne-300 px-4 py-3 rounded-lg text-sm font-semibold">
                     Solicitar entrevista
                 </a>
             </div>
@@ -249,7 +267,7 @@
                     </div>
 
                     <div class="text-center pt-1">
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20jur%C3%ADdica%20urgente&body=Hola%2C%20necesito%20asesoramiento%20jur%C3%ADdico%20urgente%20por%20mi%20caso." class="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-champagne-400/60 text-slate-200 px-6 py-3 rounded-lg text-sm transition-colors">
+                        <a href="#contacto" data-especialista="Consulta General" class="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-champagne-400/60 text-slate-200 px-6 py-3 rounded-lg text-sm transition-colors">
                             <i data-lucide="message-square" class="w-4 h-4 text-champagne-400"></i>
                             <span>Consultar mi caso</span>
                         </a>
@@ -303,7 +321,7 @@
                             </li>
                         </ul>
 
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20estafa%20virtual%20%2F%20bancaria&body=Hola%2C%20sufr%C3%AD%20una%20estafa%20virtual%2Fbancaria%20y%20necesito%20asesoramiento%20especializado." class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
+                        <a href="#contacto" data-especialista="Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos" class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
                             <span>Asesorarme sobre estafas virtuales</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -340,7 +358,7 @@
                             </li>
                         </ul>
 
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20tema%20laboral%20o%20despido&body=Hola%2C%20tengo%20una%20consulta%20por%20un%20tema%20laboral%20o%20despido." class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
+                        <a href="#contacto" data-especialista="Dra. Ingrid Maciel - Derecho Laboral / ART" class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
                             <span>Asesorarme sobre derecho laboral</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -377,7 +395,7 @@
                             </li>
                         </ul>
 
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20escrituraci%C3%B3n%20%2F%20inmuebles&body=Hola%2C%20necesito%20asesoramiento%20sobre%20escrituraci%C3%B3n%2C%20boleto%20o%20fideicomiso." class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
+                        <a href="#contacto" data-especialista="Dra. María Giménez Solano - Derecho Registral / Inmuebles" class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
                             <span>Asesorarme sobre derecho registral</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -414,7 +432,7 @@
                             </li>
                         </ul>
 
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20amparo%20de%20salud&body=Hola%2C%20necesito%20tramitar%20un%20Amparo%20de%20Salud%20por%20negativa%20de%20cobertura." class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
+                        <a href="#contacto" data-especialista="Dra. Amanda Gil López - Salud / Discapacidad / Prepaga" class="inline-flex items-center gap-2 text-sm font-medium text-champagne-300 hover:text-champagne-400 transition-colors">
                             <span>Asesorarme sobre amparos de salud</span>
                             <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
@@ -503,55 +521,106 @@
                         Envianos el detalle de tu caso para ser derivado a la abogada titular correspondiente. Atendemos de forma presencial en CABA y de forma remota a todo el país.
                     </p>
 
+                    <div class="pt-2 space-y-3">
+                        <div class="flex gap-3">
+                            <span class="w-6 h-6 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[11px] font-bold shrink-0">1</span>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-200">Elegís el área o escribís tu caso.</strong> El asistente te muestra las opciones más parecidas.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="w-6 h-6 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[11px] font-bold shrink-0">2</span>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-200">Revisamos tu consulta.</strong> La derivamos a la abogada especialista correspondiente.</p>
+                        </div>
+                        <div class="flex gap-3">
+                            <span class="w-6 h-6 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[11px] font-bold shrink-0">3</span>
+                            <p class="text-xs text-slate-400 leading-relaxed"><strong class="text-slate-200">Te contactamos.</strong> Coordinamos una entrevista presencial o remota.</p>
+                        </div>
+                    </div>
+
                     <div class="space-y-4 pt-2 text-sm">
                         <div class="flex items-center gap-3">
                             <i data-lucide="globe" class="w-4 h-4 text-champagne-400"></i>
                             <span class="text-slate-400">amparointegral.com.ar</span>
                         </div>
                         <div class="flex items-center gap-3">
-                            <i data-lucide="mail" class="w-4 h-4 text-champagne-400"></i>
-                            <span class="text-slate-400">contacto@amparointegral.com.ar</span>
-                        </div>
-                        <div class="flex items-center gap-3">
                             <i data-lucide="phone" class="w-4 h-4 text-champagne-400"></i>
-                            <span class="text-slate-400">+54 9 11 1234-5678</span>
+                            <span class="text-slate-400">Próximamente se habilitará la línea telefónica</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="lg:col-span-7">
                     <div class="luxury-card rounded-2xl p-7 sm:p-8">
-                        <form id="contact-form" class="space-y-4">
+                        <div class="mb-6">
+                            <h3 class="font-serif text-lg font-semibold text-slate-100">Contanos tu caso</h3>
+                            <p class="text-xs text-slate-400 mt-1 leading-relaxed">Completá los datos básicos. Si no sabés qué especialista elegir, seleccioná <strong class="text-slate-200">“Otro / No sé qué especialista elegir”</strong> y derivamos tu consulta.</p>
+                        </div>
+                        <form id="contact-form" action="https://formsubmit.co/f573f0dd3f08f6147ae4f4ba3eb76ab6" method="POST" class="space-y-4">
+                            <input type="hidden" name="_subject" id="form-subject" value="Nueva consulta desde el sitio web - Amparo Integral">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_captcha" value="true">
+                            <input type="hidden" name="_replyto" id="form-replyto" value="">
+                            <input type="hidden" name="_next" id="form-next" value="">
+                            <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
                             <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">Nombre y apellido *</label>
-                                <input type="text" id="form-name" required placeholder="Ej: Martín Gómez" class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
+                                <label for="form-name" class="block text-xs font-medium text-slate-300 mb-1">Nombre y apellido *</label>
+                                <p class="text-[11px] text-slate-500 mb-1.5">Como figura en tu DNI, para identificarte.</p>
+                                <input type="text" id="form-name" name="Nombre y apellido" required maxlength="80" autocomplete="name" placeholder="Ej: Martín Gómez" class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
                             </div>
 
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">Teléfono (WhatsApp) *</label>
-                                    <input type="tel" id="form-phone" required placeholder="Ej: 11 1234 5678" class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
+                                <div class="flex flex-col">
+                                    <label for="form-phone" class="block text-xs font-medium text-slate-300 mb-1">Teléfono (WhatsApp) *</label>
+                                    <p class="text-[11px] text-slate-500 mb-1.5">Con código de área. Lo usamos solo para contactarte.</p>
+                                    <input type="tel" id="form-phone" name="Teléfono" required maxlength="30" autocomplete="tel" inputmode="tel" placeholder="Ej: 11 1234 5678" class="w-full mt-auto px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
                                 </div>
-                                <div>
-                                    <label class="block text-xs font-medium text-slate-300 mb-1.5">Materia / Especialista *</label>
-                                    <select id="form-specialist" required class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
-                                        <option value="Estafas Virtuales / Ciberdelitos">Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos</option>
-                                        <option value="Derecho Laboral / ART">Dra. Ingrid Maciel - Derecho Laboral / ART</option>
-                                        <option value="Derecho Registral / Inmuebles">Dra. María Giménez Solano - Escrituración / Inmuebles</option>
-                                        <option value="Amparos de Salud">Amparos de Salud / Cobertura Médica</option>
-                                        <option value="Consulta General">Consulta Jurídica General</option>
-                                    </select>
+                                <div class="flex flex-col">
+                                    <label for="form-email" class="block text-xs font-medium text-slate-300 mb-1">Mail de contacto *</label>
+                                    <p class="text-[11px] text-slate-500 mb-1.5">Te enviamos una copia y te escribimos por acá.</p>
+                                    <input type="email" id="form-email" name="Mail de contacto" required maxlength="120" autocomplete="email" placeholder="Ej: martin@email.com" class="w-full mt-auto px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-medium text-slate-300 mb-1.5">Resumen de la consulta *</label>
-                                <textarea id="form-message" rows="4" required placeholder="Sintetizá brevemente lo ocurrido..." class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60"></textarea>
+                                <label for="form-specialist" class="block text-xs font-medium text-slate-300 mb-1">Área / Especialista *</label>
+                                <p class="text-[11px] text-slate-500 mb-1.5">Elegí el área. Si no sabés, usá “Otro / No sé qué especialista elegir”.</p>
+                                <select id="form-specialist" name="Materia / Especialista" required class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60">
+                                    <option value="" disabled selected>Seleccioná un área o “Otro”</option>
+                                    <optgroup label="Laboral y ART">
+                                        <option value="Dra. Ingrid Maciel - Derecho Laboral / ART">Laboral y ART — Dra. Ingrid Maciel</option>
+                                    </optgroup>
+                                    <optgroup label="Vivienda e inmuebles">
+                                        <option value="Dra. María Giménez Solano - Derecho Registral / Inmuebles">Registral e inmobiliario — Dra. María Giménez Solano</option>
+                                    </optgroup>
+                                    <optgroup label="Salud y cobertura médica">
+                                        <option value="Dra. Amanda Gil López - Salud / Discapacidad / Prepaga">Salud, discapacidad y prepaga — Dra. Amanda Gil López</option>
+                                    </optgroup>
+                                    <optgroup label="Bancos, consumo y planes de ahorro">
+                                        <option value="Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos">Estafas virtuales y ciberdelitos — Dra. Amanda Gil López</option>
+                                        <option value="Dra. Amanda Gil López - Consumidor / Bancos / Planes de Ahorro">Consumidor, bancos y planes de ahorro — Dra. Amanda Gil López</option>
+                                    </optgroup>
+                                    <optgroup label="Orientación general">
+                                        <option value="Consulta General">Otro / No sé qué especialista elegir</option>
+                                    </optgroup>
+                                </select>
+                                <p id="specialist-help" class="text-[11px] text-slate-500 leading-relaxed mt-1.5">Si no sabés qué elegir, seleccioná “Otro” y derivamos tu caso a la especialista correspondiente.</p>
                             </div>
 
-                            <button type="submit" class="w-full gold-gradient-bg text-navy-950 font-semibold py-3.5 px-6 rounded-lg text-sm transition-colors">
+                            <div>
+                                <label for="form-message" class="block text-xs font-medium text-slate-300 mb-1">Resumen de la consulta *</label>
+                                <p class="text-[11px] text-slate-500 mb-1.5">Contanos qué pasó, desde cuándo y qué necesitás. No incluyas claves, CBU ni números de tarjeta.</p>
+                                <textarea id="form-message" name="Resumen de la consulta" rows="4" required maxlength="1500" placeholder="Ej: Me vaciaron la cuenta del banco el viernes..." class="w-full px-4 py-3 rounded-lg bg-navy-950 border border-white/10 text-slate-100 text-sm focus:outline-none focus:border-champagne-400/60"></textarea>
+                            </div>
+
+                            <p id="form-error" class="hidden text-[11px] leading-relaxed text-red-400 text-center"></p>
+
+                            <button type="submit" id="contact-submit" class="w-full gold-gradient-bg text-navy-950 font-semibold py-3.5 px-6 rounded-lg text-sm transition-colors disabled:opacity-60 disabled:cursor-not-allowed">
                                 Enviar consulta
                             </button>
+
+                            <p class="text-[11px] leading-relaxed text-slate-500 text-center">
+                                Los campos con * son obligatorios. Tus datos se usan solo para contactarte. Al enviar se solicitará una verificación anti-bots (reCAPTCHA).
+                            </p>
                         </form>
 
                         <div id="form-success" class="hidden text-center py-8 space-y-3">
@@ -599,7 +668,7 @@
                         <h4 class="font-serif font-semibold text-slate-100 text-sm">Asistente Amparo Integral</h4>
                         <span class="text-[10px] text-slate-400 flex items-center gap-1">
                             <span class="w-1.5 h-1.5 rounded-full bg-champagne-400"></span>
-                            Respuesta automatizada 24/7
+                            Orientación inicial 24/7
                         </span>
                     </div>
                 </div>
@@ -615,47 +684,25 @@
                     <div class="w-6 h-6 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center shrink-0 text-[10px] font-bold">AI</div>
                     <div class="p-3 rounded-2xl rounded-tl-none bg-navy-800 border border-white/5 text-slate-300 space-y-2">
                         <p>¡Hola! Bienvenido a <strong class="text-slate-100">Amparo Integral</strong>.</p>
-                        <p>Indicá la opción deseada para orientarte con la abogada especialista:</p>
+                        <p>Podés elegir un área o escribirme tu caso con tus palabras (por ejemplo: <em>“Me vaciaron la cuenta”</em>). Te muestro las opciones más parecidas.</p>
+                        <p>Si ninguna coincide, elegí <strong>“Otro”</strong> y lo revisamos.</p>
+                        <p class="text-[10px] text-slate-500">La orientación es informativa y no reemplaza una consulta legal.</p>
                     </div>
                 </div>
 
                 <!-- Interactive Options Buttons Container -->
-                <div id="chat-options" class="space-y-2 pt-1 pl-8">
-                    <button onclick="handleBotOption(1)" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">1</span>
-                        <span>Quiero realizar una consulta general</span>
-                    </button>
-
-                    <button onclick="handleBotOption(2)" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-champagne-400/40 text-champagne-300 hover:border-champagne-400 transition-colors font-medium flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full gold-gradient-bg text-navy-950 flex items-center justify-center text-[10px] font-bold shrink-0">2</span>
-                        <span>Fui víctima de una estafa virtual</span>
-                    </button>
-
-                    <button onclick="handleBotOption(3)" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">3</span>
-                        <span>Tengo un problema laboral o de ART</span>
-                    </button>
-
-                    <button onclick="handleBotOption(4)" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">4</span>
-                        <span>Necesito escriturar un inmueble</span>
-                    </button>
-
-                    <button onclick="handleBotOption(5)" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium flex items-center gap-2">
-                        <span class="w-5 h-5 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0">5</span>
-                        <span>Cobertura médica / Amparo de Salud</span>
-                    </button>
-                </div>
+                <div id="chat-options" class="space-y-2 pt-1 pl-8"></div>
             </div>
 
             <!-- Chat Footer Input Simulation -->
             <div class="p-3 bg-navy-950 border-t border-white/5">
                 <form id="chat-input-form" class="flex gap-2">
-                    <input type="text" id="chat-input-field" placeholder="Escribí un mensaje o número..." class="flex-1 px-3 py-2 rounded-lg bg-navy-900 border border-white/10 text-slate-100 text-xs focus:outline-none focus:border-champagne-400/60">
+                    <input type="text" id="chat-input-field" placeholder="Ej: Me vaciaron la cuenta" class="flex-1 px-3 py-2 rounded-lg bg-navy-900 border border-white/10 text-slate-100 text-xs focus:outline-none focus:border-champagne-400/60">
                     <button type="submit" class="gold-gradient-bg text-navy-950 p-2 rounded-lg">
                         <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
                 </form>
+                <p class="text-[10px] text-slate-500 text-center mt-1.5">Escribí tu caso o elegí un número del 1 al 6.</p>
             </div>
 
         </div>
@@ -673,11 +720,124 @@
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Contact Form Submission Handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            this.classList.add('hidden');
-            document.getElementById('form-success').classList.remove('hidden');
+        // Contact Form: specialist prefill + success state after FormSubmit redirect
+        const contactForm = document.getElementById('contact-form');
+        const specialistSelect = document.getElementById('form-specialist');
+        const formSuccess = document.getElementById('form-success');
+        const formNext = document.getElementById('form-next');
+        const contactParams = new URLSearchParams(window.location.search);
+
+        if (formNext) {
+            formNext.value = window.location.href.split('?')[0].split('#')[0] + '?enviado=1#contacto';
+        }
+
+        const formError = document.getElementById('form-error');
+        const contactSubmit = document.getElementById('contact-submit');
+        const formLoadedAt = Date.now();
+
+        function showFormError(message) {
+            if (!formError) return;
+            formError.textContent = message;
+            formError.classList.remove('hidden');
+        }
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (e) {
+                const honey = contactForm.querySelector('input[name="_honey"]');
+                if (honey && honey.value.trim() !== '') {
+                    e.preventDefault();
+                    return;
+                }
+
+                if (Date.now() - formLoadedAt < 3000) {
+                    e.preventDefault();
+                    showFormError('Esperá unos segundos antes de enviar la consulta.');
+                    return;
+                }
+
+                contactForm.querySelectorAll('input:not([type="hidden"]), textarea').forEach(function (field) {
+                    field.value = field.value.trim();
+                });
+
+                const emailField = document.getElementById('form-email');
+                const replyToField = document.getElementById('form-replyto');
+                const subjectField = document.getElementById('form-subject');
+                const nameField = document.getElementById('form-name');
+
+                if (emailField && replyToField) replyToField.value = emailField.value.trim();
+
+                if (subjectField) {
+                    const specialist = specialistSelect && specialistSelect.value ? specialistSelect.value : 'Consulta General';
+                    const name = nameField ? nameField.value.trim() : '';
+                    subjectField.value = 'Nueva consulta - ' + specialist + (name ? ' - ' + name : '');
+                }
+
+                if (formError) formError.classList.add('hidden');
+                if (contactSubmit) {
+                    contactSubmit.disabled = true;
+                    contactSubmit.textContent = 'Enviando...';
+                }
+            });
+        }
+
+        window.addEventListener('pageshow', function () {
+            if (contactSubmit) {
+                contactSubmit.disabled = false;
+                contactSubmit.textContent = 'Enviar consulta';
+            }
+        });
+
+        const specialistMap = {
+            amanda: 'Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos',
+            consumidor: 'Dra. Amanda Gil López - Consumidor / Bancos / Planes de Ahorro',
+            ingrid: 'Dra. Ingrid Maciel - Derecho Laboral / ART',
+            maria: 'Dra. María Giménez Solano - Derecho Registral / Inmuebles',
+            salud: 'Dra. Amanda Gil López - Salud / Discapacidad / Prepaga',
+            general: 'Consulta General',
+            otro: 'Consulta General'
+        };
+
+        const specialistHelp = document.getElementById('specialist-help');
+        const specialistDescriptions = {
+            'Dra. Ingrid Maciel - Derecho Laboral / ART': 'Despidos, renuncias, ART, trabajo no registrado, vacaciones y maltrato laboral.',
+            'Dra. María Giménez Solano - Derecho Registral / Inmuebles': 'Desalojos, escrituras, sucesiones, alquileres, terrenos y división de bienes.',
+            'Dra. Amanda Gil López - Salud / Discapacidad / Prepaga': 'Prótesis, medicación, discapacidad, internaciones y negativas de obras sociales o prepagas.',
+            'Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos': 'Estafas bancarias o virtuales, home banking, tarjetas y créditos no solicitados.',
+            'Dra. Amanda Gil López - Consumidor / Bancos / Planes de Ahorro': 'Planes de ahorro, defensa del consumidor, aumentos y cláusulas abusivas.',
+            'Consulta General': 'Si no sabés qué área elegir, contanos tu caso y lo derivamos a la especialista correspondiente.'
+        };
+        const specialistDefaultHelp = 'Si no sabés qué elegir, seleccioná “Otro / No sé qué especialista elegir” y derivamos tu caso.';
+
+        function updateSpecialistHelp() {
+            if (!specialistHelp || !specialistSelect) return;
+            specialistHelp.textContent = specialistDescriptions[specialistSelect.value] || specialistDefaultHelp;
+        }
+
+        if (specialistSelect) {
+            specialistSelect.addEventListener('change', updateSpecialistHelp);
+        }
+
+        function setSpecialist(value) {
+            if (!specialistSelect || !value) return;
+            const resolved = specialistMap[value] || value;
+            const exists = Array.from(specialistSelect.options).some(option => option.value === resolved);
+            if (exists) {
+                specialistSelect.value = resolved;
+                updateSpecialistHelp();
+            }
+        }
+
+        setSpecialist(contactParams.get('especialista'));
+        updateSpecialistHelp();
+
+        if (contactParams.get('enviado') === '1') {
+            if (contactForm) contactForm.classList.add('hidden');
+            if (formSuccess) formSuccess.classList.remove('hidden');
+        }
+
+        document.addEventListener('click', function(e) {
+            const trigger = e.target.closest('[data-especialista]');
+            if (trigger) setSpecialist(trigger.getAttribute('data-especialista'));
         });
 
         // ==========================================
@@ -693,11 +853,84 @@
         const chatInputForm = document.getElementById('chat-input-form');
         const chatInputField = document.getElementById('chat-input-field');
 
+        let chatAudioContext = null;
+        let lastBotSoundAt = 0;
+        let chatBlinkTimer = null;
+
+        function ensureChatAudio() {
+            try {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContextClass) return null;
+                if (!chatAudioContext) chatAudioContext = new AudioContextClass();
+                if (chatAudioContext.state === 'suspended') {
+                    const resume = chatAudioContext.resume();
+                    if (resume && typeof resume.catch === 'function') resume.catch(function () {});
+                }
+                return chatAudioContext;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        function playBotSound() {
+            const now = Date.now();
+            if (now - lastBotSoundAt < 180) return;
+            const audioContext = ensureChatAudio();
+            if (!audioContext) return;
+            lastBotSoundAt = now;
+
+            try {
+                const start = audioContext.currentTime;
+                const gain = audioContext.createGain();
+                gain.gain.setValueAtTime(0.0001, start);
+                gain.gain.exponentialRampToValueAtTime(0.12, start + 0.01);
+                gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.22);
+                gain.connect(audioContext.destination);
+
+                const oscillator = audioContext.createOscillator();
+                oscillator.type = 'sine';
+                oscillator.frequency.setValueAtTime(740, start);
+                oscillator.frequency.exponentialRampToValueAtTime(988, start + 0.08);
+                oscillator.connect(gain);
+                oscillator.start(start);
+                oscillator.stop(start + 0.24);
+            } catch (error) {
+                // El sonido es opcional; no debe interrumpir el chat.
+            }
+        }
+
+        function notifyChat() {
+            playBotSound();
+            const target = chatBox.classList.contains('hidden') ? chatToggleBtn : chatBox;
+            target.classList.remove('chat-notification-blink');
+            void target.offsetWidth;
+            target.classList.add('chat-notification-blink');
+            if (chatBlinkTimer) window.clearTimeout(chatBlinkTimer);
+            chatBlinkTimer = window.setTimeout(function () {
+                target.classList.remove('chat-notification-blink');
+            }, 1900);
+        }
+
+        function scrollToMessageStart(element) {
+            const top = Math.max(0, element.offsetTop - chatMessages.offsetTop - 8);
+            if (typeof chatMessages.scrollTo === 'function') {
+                const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+                chatMessages.scrollTo({ top: top, behavior: reduceMotion ? 'auto' : 'smooth' });
+            } else {
+                chatMessages.scrollTop = top;
+            }
+        }
+
         function toggleChat() {
+            ensureChatAudio();
             chatBox.classList.toggle('hidden');
             chatIconOpen.classList.toggle('hidden');
             chatIconClose.classList.toggle('hidden');
             chatLabel.textContent = chatBox.classList.contains('hidden') ? 'Asistente Virtual' : 'Cerrar';
+            if (!chatBox.classList.contains('hidden')) {
+                chatToggleBtn.classList.remove('chat-notification-blink');
+                chatBox.classList.remove('chat-notification-blink');
+            }
         }
 
         chatToggleBtn.addEventListener('click', toggleChat);
@@ -705,15 +938,21 @@
 
         // Helper to append User message
         function appendUserMessage(text) {
+            ensureChatAudio();
             const div = document.createElement('div');
             div.className = "flex justify-end";
-            div.innerHTML = `
-                <div class="p-3 rounded-2xl rounded-tr-none gold-gradient-bg text-navy-950 font-semibold max-w-[80%] text-xs shadow-md">
-                    ${text}
-                </div>
-            `;
+            const bubble = document.createElement('div');
+            bubble.className = "p-3 rounded-2xl rounded-tr-none gold-gradient-bg text-navy-950 font-semibold max-w-[80%] text-xs shadow-md";
+            bubble.textContent = text;
+            div.appendChild(bubble);
             chatMessages.appendChild(div);
             chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function escapeHtml(value) {
+            return String(value).replace(/[&<>"']/g, function (char) {
+                return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+            });
         }
 
         // Helper to append Bot response
@@ -727,95 +966,347 @@
                 </div>
             `;
             chatMessages.appendChild(div);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+            notifyChat();
+            scrollToMessageStart(div);
+        }
+
+        const chatOptionsContainer = document.getElementById('chat-options');
+
+        const assistantCategories = [
+            { id: 'laboral', label: 'Problema laboral o de ART', description: 'Despidos, ART, vacaciones, trabajo no registrado' },
+            { id: 'registral', label: 'Problemas con mi vivienda o inmueble', description: 'Desalojos, escrituras, herencias, alquileres' },
+            { id: 'salud', label: 'Salud, discapacidad o prepaga', description: 'Amparos, prótesis, medicación, internaciones' },
+            { id: 'bancos', label: 'Estafas bancarias, tarjetas o créditos', description: 'Home banking, billeteras virtuales, deudas' },
+            { id: 'consumo', label: 'Planes de ahorro y defensa del consumidor', description: 'Entrega de autos, cuotas, abusos, bajas' },
+            { id: 'general', label: 'Otro / No encuentro mi caso', description: 'Contanos tu caso y lo derivamos a la especialista' }
+        ];
+
+        const assistantTopics = {
+            laboral: {
+                title: 'Derecho Laboral y ART',
+                specialist: 'Dra. Ingrid Maciel - Derecho Laboral / ART',
+                specialistInfo: 'Dra. Ingrid Maciel: despidos, renuncias, ART, trabajo no registrado, vacaciones y maltrato laboral.',
+                intro: 'Elegí la situación que más se parezca a tu caso. Si no encontrás la tuya, usá “Otro”.',
+                items: [
+                    { id: 'vacaciones', label: 'Vacaciones y licencias', question: 'No me quieren dar las vacaciones o la licencia por matrimonio, o me las imponen a último momento.', keywords: ['vacaciones', 'licencia', 'matrimonio', 'descanso', 'franco', 'permiso'] },
+                    { id: 'accidentes', label: 'Accidente o enfermedad laboral / ART', question: 'Tuve un accidente trabajando, yendo o volviendo al trabajo, o una enfermedad por mi trabajo (por ejemplo, lumbalgia por cargar peso), y la ART no se hace cargo o rechaza la cobertura.', keywords: ['accidente', 'art', 'enfermedad laboral', 'enfermedad', 'lumbalgia', 'espalda', 'accidente in itinere', 'volviendo del trabajo', 'yendo al trabajo', 'cobertura'] },
+                    { id: 'seguridad', label: 'Seguridad, uniforme y elementos de trabajo', question: 'En mi trabajo no cumplen las medidas de seguridad o no me dan el uniforme ni los elementos de protección.', keywords: ['seguridad', 'uniforme', 'proteccion', 'elementos de proteccion', 'guantes', 'casco', 'riesgo', 'insalubre', 'medidas de seguridad'] },
+                    { id: 'renuncia', label: 'Renuncia, despidos y acuerdos', question: 'Me piden que renuncie o me quieren hacer firmar un acuerdo y necesito saber qué me corresponde cobrar.', keywords: ['renuncia', 'renunciar', 'despido', 'despidieron', 'echar', 'echaron', 'acuerdo', 'indemnizacion', 'telegrama', 'liquidacion', 'firmar'] },
+                    { id: 'registrado', label: 'Trabajo no registrado, salarios y horas extra', question: 'Trabajo total o parcialmente en negro, tengo diferencias salariales o no me pagan las horas extra.', keywords: ['negro', 'no registrado', 'en negro', 'salario', 'sueldo', 'horas extra', 'diferencias salariales', 'recibo', 'trabajo no registrado', 'pagan'] },
+                    { id: 'maltrato', label: 'Maltrato, cambios de horario o traslados', question: 'Sufro maltrato laboral, me cambiaron el horario de un día para otro o me quieren cambiar de sede o lugar de trabajo.', keywords: ['maltrato', 'acoso', 'hostigamiento', 'horario', 'turno', 'traslado', 'trasladar', 'cambio de sede', 'cambio de lugar', 'mobbing'] }
+                ]
+            },
+            registral: {
+                title: 'Derecho Registral e Inmobiliario',
+                specialist: 'Dra. María Giménez Solano - Derecho Registral / Inmuebles',
+                specialistInfo: 'Dra. María Giménez Solano: desalojos, escrituras, sucesiones, alquileres, terrenos y división de bienes.',
+                intro: 'Elegí el tema de tu consulta. Si no encontrás la opción exacta, usá “Otro”.',
+                items: [
+                    { id: 'desalojo', label: 'Me quieren desalojar', question: 'Me quieren desalojar, me enviaron una carta o me amenazan con cambiar la cerradura o sacar mis cosas.', keywords: ['desalojo', 'desalojar', 'desaloj', 'carta', 'cerradura', 'echar', 'sacar de la casa', 'sacar mis cosas', 'amenaza', 'desocupar', 'casa', 'vivienda'] },
+                    { id: 'escritura', label: 'Quiero escriturar / boleto de compraventa', question: 'Quiero escriturar mi vivienda; tengo solo un boleto de compraventa o el dueño desapareció y no puedo escriturar.', keywords: ['escritura', 'escriturar', 'boleto', 'compraventa', 'titulo', 'dominio', 'escribania', 'dueño desaparecio'] },
+                    { id: 'usucapion', label: 'Vivo hace años sin título', question: 'Vivo hace más de 20 años en una casa sin título y necesito regularizar mi situación o me quieren desalojar.', keywords: ['usucapion', 'prescripcion', 'vivo hace años', 'sin titulo', 'regularizar', 'posesion', '20 años', 'veinte años'] },
+                    { id: 'pozo', label: 'Compré en pozo / constructora', question: 'Compré un departamento en pozo, la obra se frenó, la constructora se atrasó o no responde.', keywords: ['pozo', 'constructora', 'departamento en pozo', 'obra frenada', 'obra parada', 'obra se freno', 'atraso', 'entrega', 'desarrollista'] },
+                    { id: 'herencia', label: 'Herencia y sucesión', question: 'La casa era de mis padres, falleció el dueño sin sucesión o mis hermanos quieren vender.', keywords: ['herencia', 'sucesion', 'fallecio', 'padres', 'hermanos', 'vender', 'declaratoria'] },
+                    { id: 'alquiler', label: 'Alquileres y garantías', question: 'Mi inquilino no paga o salí de garante y me están embargando el sueldo.', keywords: ['alquiler', 'inquilino', 'garante', 'garantia', 'embargo', 'embarg', 'contrato de alquiler', 'no paga'] },
+                    { id: 'terrenos', label: 'Compra de terrenos, deudas o embargos', question: 'Compré un terreno o una casa con deudas, embargos o sospecho que me estafaron.', keywords: ['terreno', 'deuda', 'embargo', 'embarg', 'estaf', 'compra', 'casa con deuda', 'sospecho'] },
+                    { id: 'separacion', label: 'Me separé: división de la vivienda', question: 'Me separé y necesito saber qué me corresponde por la casa donde vivo.', keywords: ['separacion', 'separe', 'divorcio', 'casa', 'vivienda', 'division', 'pareja', 'conyuge', 'dividir'] }
+                ]
+            },
+            salud: {
+                title: 'Salud, Cobertura Médica y Amparos',
+                specialist: 'Dra. Amanda Gil López - Salud / Discapacidad / Prepaga',
+                specialistInfo: 'Dra. Amanda Gil López: cobertura médica, discapacidad, prótesis, medicación e internaciones.',
+                intro: 'Elegí la situación que necesitás resolver. Si no aparece tu caso, usá “Otro”.',
+                items: [
+                    { id: 'protesis', label: 'Prótesis, medicación o tratamiento', question: 'La obra social o prepaga no me entrega la prótesis, la medicación oncológica o un tratamiento necesario.', keywords: ['protesis', 'medicacion', 'medicamento', 'oncolog', 'tratamiento', 'obra social', 'prepaga', 'no me entrega', 'cobertura'] },
+                    { id: 'discapacidad', label: 'Discapacidad: medicación, clínica o terapias', question: 'Tengo certificado de discapacidad y no me autorizan medicación, clínica, acompañante terapéutico o terapias de apoyo.', keywords: ['discapacidad', 'certificado', 'terap', 'acompañante', 'clinica', 'medicacion', 'apoyo', 'cud'] },
+                    { id: 'urgencia', label: 'Urgencia médica o internación', question: 'Tengo una urgencia médica y no me autorizan la internación o la prestación urgente.', keywords: ['urgencia', 'internacion', 'emergencia', 'guardia', 'no me autorizan', 'prestacion urgente'] },
+                    { id: 'jubilacion', label: 'Jubilación y prepaga', question: 'Me jubilé o estoy por jubilarme y la prepaga me quiere dar de baja o aumentar la cuota excesivamente.', keywords: ['jubilacion', 'jubilado', 'jubile', 'prepaga', 'aument', 'cuota', 'baja', 'pami'] },
+                    { id: 'amparo', label: 'Otra negativa de cobertura / amparo', question: 'Necesito iniciar un amparo de salud por negativa de cobertura, aumento abusivo o falta de prestación.', keywords: ['amparo', 'negativa', 'cobertura', 'aumento abusivo', 'aument', 'falta de prestacion', 'obra social', 'prepaga'] }
+                ]
+            },
+            bancos: {
+                title: 'Bancos, Estafas y Créditos',
+                specialist: 'Dra. Amanda Gil López - Estafas Virtuales / Ciberdelitos',
+                specialistInfo: 'Dra. Amanda Gil López: estafas bancarias o virtuales, home banking, tarjetas y créditos no solicitados.',
+                intro: 'Elegí el problema que tuviste. Si no encontrás la opción exacta, usá “Otro”.',
+                items: [
+                    { id: 'estafa', label: 'Estafa bancaria o virtual', question: 'Me llamaron del banco y me pidieron claves, me vaciaron la cuenta, usaron mis datos o mi tarjeta, o me hackearon el home banking o la billetera virtual.', keywords: ['estafa', 'estaf', 'vaciaron', 'vaciaron la cuenta', 'cuenta', 'banco', 'bancaria', 'bancario', 'claves', 'home banking', 'billetera', 'virtual', 'tarjeta', 'hackearon', 'robaron', 'datos', 'transferencia', 'phishing', 'whatsapp'] },
+                    { id: 'credito', label: 'Crédito, préstamo o seguro no solicitado', question: 'Me sacaron un crédito, préstamo o seguro a mi nombre que nunca pedí o sin mi consentimiento.', keywords: ['credito', 'prestamo', 'prestaron', 'seguro', 'no solicite', 'no pedi', 'a mi nombre', 'consentimiento'] },
+                    { id: 'debitos', label: 'Débitos o descuentos sin explicación', question: 'Me descontaron plata del sueldo o de la cuenta sin explicación o me siguen cobrando un servicio que no corresponde.', keywords: ['debito', 'debitaron', 'descuento', 'descontaron', 'cobro', 'cobran', 'seguro', 'servicio', 'no corresponde', 'suscripcion'] }
+                ]
+            },
+            consumo: {
+                title: 'Planes de Ahorro y Consumo',
+                specialist: 'Dra. Amanda Gil López - Consumidor / Bancos / Planes de Ahorro',
+                specialistInfo: 'Dra. Amanda Gil López: planes de ahorro, defensa del consumidor, aumentos y cláusulas abusivas.',
+                intro: 'Elegí tu situación. Si no encontrás la opción exacta, usá “Otro”.',
+                items: [
+                    { id: 'entrega', label: 'Pagué el plan y no me entregan el auto', question: 'Pagué todas las cuotas del plan de ahorro y no me entregan el auto o no me adjudican.', keywords: ['plan de ahorro', 'planes de ahorro', 'pague', 'cuotas', 'auto', 'autos', 'entrega', 'adjudicacion', 'no me entregan', 'concesionaria'] },
+                    { id: 'aumento', label: 'Aumentos o cuotas impagables', question: 'La cuota del plan de ahorro aumentó muchísimo más que el valor del vehículo o ya no puedo pagarla.', keywords: ['plan de ahorro', 'planes de ahorro', 'cuota', 'aument', 'impagable', 'valor del auto', 'precio', 'inflacion'] },
+                    { id: 'baja', label: 'Baja, gastos o multas abusivas', question: 'Pedí la baja del plan y me siguen cobrando, o me cobran gastos administrativos o multas abusivas.', keywords: ['baja', 'plan', 'planes', 'siguen cobrando', 'gastos administrativos', 'multas', 'abusivas', 'cancelar'] },
+                    { id: 'saldo', label: 'Devolución de saldo o promesas incumplidas', question: 'Terminé de pagar y no me devuelven el saldo, o me prometieron entrega asegurada en una cuota y no se cumplió.', keywords: ['saldo', 'devolucion', 'termine de pagar', 'promesa', 'entrega asegurada', 'una cuota', 'no me devuelven'] },
+                    { id: 'fallecido', label: 'Plan de un familiar fallecido', question: 'Le siguen cobrando la cuota del plan de ahorro a un familiar fallecido.', keywords: ['fallecido', 'familiar', 'muerto', 'siguen cobrando', 'papa', 'padre'] },
+                    { id: 'general', label: 'Otro problema de consumidor', question: 'Tengo un problema de consumidor: aumentos abusivos, cláusulas abusivas, tarjetas de crédito o un servicio que no cumple.', keywords: ['consumidor', 'aumento abusivo', 'clausula abusiva', 'tarjeta de credito', 'servicio', 'no cumple', 'defensa del consumidor'] }
+                ]
+            }
+        };
+
+        function mainMenuButtonsHtml() {
+            return assistantCategories.map(function (category, index) {
+                return '<button type="button" onclick="handleBotOption(' + (index + 1) + ')" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium flex items-start gap-2">' +
+                    '<span class="w-5 h-5 rounded-full bg-white/5 text-champagne-400 flex items-center justify-center text-[10px] font-bold shrink-0 mt-0.5">' + (index + 1) + '</span>' +
+                    '<span class="flex-1">' +
+                        '<span class="block text-xs">' + escapeHtml(category.label) + '</span>' +
+                        '<span class="block text-[10px] font-normal text-slate-400 mt-0.5 leading-snug">' + escapeHtml(category.description) + '</span>' +
+                    '</span>' +
+                '</button>';
+            }).join('');
+        }
+
+        function renderInitialMenu() {
+            if (chatOptionsContainer) chatOptionsContainer.innerHTML = mainMenuButtonsHtml();
+        }
+
+        function appendMainMenu() {
+            appendBotMessage(`
+                <p><strong>Elegí un área:</strong></p>
+                <p class="text-[10px] text-slate-400">También podés escribir tu caso con tus palabras y te muestro las opciones más parecidas.</p>
+                <div class="space-y-2">${mainMenuButtonsHtml()}</div>
+            `);
+        }
+
+        let lastAssistantPrefill = '';
+
+        function prefillMessage(message, force) {
+            const messageField = document.getElementById('form-message');
+            if (!messageField) return;
+            const value = message.trim();
+            if (!value) return;
+            const current = messageField.value.trim();
+            if (force || !current || current === lastAssistantPrefill) {
+                messageField.value = value;
+                lastAssistantPrefill = value;
+            }
+        }
+
+        function normalizeText(value) {
+            return String(value)
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '')
+                .replace(/[^a-z0-9\s]/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+
+        function escapeRegExp(value) {
+            return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        }
+
+        function containsKeyword(normalizedText, keyword) {
+            if (keyword.includes(' ')) return normalizedText.includes(keyword);
+            const escaped = escapeRegExp(keyword);
+            if (keyword.length >= 5) {
+                return new RegExp('(^|\\s)' + escaped + '[a-z]*($|\\s)').test(normalizedText);
+            }
+            return new RegExp('(^|\\s)' + escaped + '($|\\s)').test(normalizedText);
+        }
+
+        function countKeywordMatches(normalizedText, keywords) {
+            let score = 0;
+            (keywords || []).forEach(function (keyword) {
+                const normalizedKeyword = normalizeText(keyword);
+                if (!normalizedKeyword) return;
+                if (containsKeyword(normalizedText, normalizedKeyword)) {
+                    score += normalizedKeyword.includes(' ') ? 3 : 2;
+                }
+            });
+            return score;
+        }
+
+        function findBestMatches(text) {
+            const normalized = normalizeText(text);
+            if (!normalized) return [];
+            const matches = [];
+            Object.keys(assistantTopics).forEach(function (categoryId) {
+                const topic = assistantTopics[categoryId];
+                topic.items.forEach(function (item) {
+                    const score = countKeywordMatches(normalized, item.keywords);
+                    if (score > 0) {
+                        matches.push({ categoryId: categoryId, topic: topic, item: item, score: score });
+                    }
+                });
+            });
+            matches.sort(function (a, b) { return b.score - a.score; });
+            return matches.slice(0, 5);
+        }
+
+        function renderSuggestionButtons(matches, userText) {
+            return matches.map(function (match) {
+                return '<button type="button" data-suggest-category="' + escapeHtml(match.categoryId) + '" data-suggest-item="' + escapeHtml(match.item.id) + '" data-user-text="' + escapeHtml(userText) + '" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium text-[11px] leading-snug">' +
+                    '<span class="block text-[10px] uppercase tracking-wider text-champagne-400">' + escapeHtml(match.topic.title) + '</span>' +
+                    '<span class="block mt-0.5">' + escapeHtml(match.item.label) + '</span>' +
+                '</button>';
+            }).join('');
+        }
+
+        function buildTopicMenu(topic, categoryId) {
+            const items = topic.items.map(function (item) {
+                return '<button type="button" onclick="handleAssistantTopic(\'' + categoryId + '\', \'' + item.id + '\')" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium text-[11px] leading-snug">' +
+                    escapeHtml(item.label) +
+                '</button>';
+            }).join('');
+
+            return `
+                <p><strong>${escapeHtml(topic.title)}</strong></p>
+                <p>${escapeHtml(topic.intro)}</p>
+                <div class="space-y-2">${items}</div>
+                <button type="button" onclick="handleOtherOption()" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-dashed border-white/20 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium text-[11px] leading-snug">Otro / No encuentro mi caso</button>
+                <button type="button" onclick="appendMainMenu()" class="text-champagne-300 hover:text-champagne-400 text-[11px] font-medium text-left">← Volver a las áreas</button>
+            `;
+        }
+
+        function handleFreeText(text) {
+            const matches = findBestMatches(text);
+            if (!matches.length) {
+                setTimeout(function () {
+                    appendBotMessage(`
+                        <p>No encontré una opción exacta para "<em>${escapeHtml(text)}</em>".</p>
+                        <p>Podés elegir un área del menú, usar <strong>“Otro”</strong> o enviar tu consulta tal como la escribiste.</p>
+                        <button type="button" data-other-text="${escapeHtml(text)}" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium text-[11px] leading-snug">Usar mi consulta y elegir “Otro”</button>
+                        <div class="space-y-2">${mainMenuButtonsHtml()}</div>
+                    `);
+                }, 400);
+                return;
+            }
+
+            setTimeout(function () {
+                appendBotMessage(`
+                    <p>Estas son las opciones que más se parecen a lo que contaste:</p>
+                    <div class="space-y-2">${renderSuggestionButtons(matches, text)}</div>
+                    <button type="button" data-other-text="${escapeHtml(text)}" class="w-full text-left p-2.5 rounded-lg bg-navy-950 border border-white/10 text-slate-300 hover:border-champagne-400/50 transition-colors font-medium text-[11px] leading-snug">Ninguna coincide: usar “Otro”</button>
+                    <button type="button" onclick="appendMainMenu()" class="text-champagne-300 hover:text-champagne-400 text-[11px] font-medium text-left">← Ver todas las áreas</button>
+                `);
+            }, 400);
+        }
+
+        function handleOtherOption(userText) {
+            const generalIndex = assistantCategories.findIndex(function (category) { return category.id === 'general'; });
+            if (generalIndex >= 0) handleBotOption(generalIndex + 1, userText);
         }
 
         // Handle Bot Option Selection
-        function handleBotOption(optionNumber) {
-            const options = {
-                1: {
-                    userText: "1. Quiero realizar una consulta general",
-                    botHtml: `
-                        <p><strong>Atención General de Secretaría:</strong></p>
-                        <p>Podés comunicarte directamente con nuestro equipo legal para derivar tu caso a la especialista correspondiente.</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20general&body=Hola%2C%20deseo%20realizar%20una%20consulta%20general%20en%20el%20Estudio%20Amparo%20Integral." class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Enviar email a Secretaría
-                        </a>
-                    `
-                },
-                2: {
-                    userText: "2. Fui víctima de una estafa virtual / ciberdelito",
-                    botHtml: `
-                        <p><strong>Asistencia de Urgencia - Dra. Amanda Gil López:</strong></p>
-                        <p>Especialista en suspensión cautelar inmediata de débitos automáticos por créditos no solicitados y ciberfraude.</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20urgente%20-%20Estafa%20virtual&body=Hola%2C%20fui%20v%C3%ADctima%20de%20una%20estafa%20virtual%20y%20necesito%20asesoramiento%20con%20la%20Dra.%20Amanda%20Gil%20L%C3%B3pez." class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Contactar con Dra. Gil López
-                        </a>
-                    `
-                },
-                3: {
-                    userText: "3. Tengo un problema laboral o de ART",
-                    botHtml: `
-                        <p><strong>Derecho Laboral - Dra. Ingrid Maciel:</strong></p>
-                        <p>Atención para despidos, trabajo no registrado, liquidaciones e infortunios de trabajo ante Comisiones Médicas SRT.</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20laboral%20%2F%20ART&body=Hola%20Dra.%20Ingrid%20Maciel%2C%20tengo%20una%20consulta%20por%20un%20asunto%20laboral%2FART." class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Contactar con Dra. Maciel
-                        </a>
-                    `
-                },
-                4: {
-                    userText: "4. Necesito escriturar un inmueble / fideicomiso",
-                    botHtml: `
-                        <p><strong>Derecho Registral e Inmobiliario - Dra. María Giménez Solano:</strong></p>
-                        <p>Asesoramiento en demandas de escrituración con boleto de compraventa y revisión de contratos de fideicomiso.</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20escrituraci%C3%B3n%20%2F%20inmuebles&body=Hola%20Dra.%20Mar%C3%ADa%20Gim%C3%A9nez%20Solano%2C%20necesito%20asesoramiento%20por%20escrituraci%C3%B3n%2Finmuebles." class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Contactar con Dra. Giménez Solano
-                        </a>
-                    `
-                },
-                5: {
-                    userText: "5. Cobertura médica / Amparo de Salud",
-                    botHtml: `
-                        <p><strong>Amparos de Salud Urgentes:</strong></p>
-                        <p>Iniciación de medidas de cautela judicial ante negativas de tratamiento, aumentos o medicamentos por obras sociales/prepagas.</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20por%20amparo%20de%20salud&body=Hola%2C%20necesito%20asesoramiento%20urgente%20por%20un%20Amparo%20de%20Salud." class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Consultar por Amparo de Salud
-                        </a>
-                    `
-                }
-            };
+        function handleBotOption(optionNumber, userText) {
+            const category = assistantCategories[optionNumber - 1];
+            if (!category) return;
 
-            const selected = options[optionNumber];
-            if (selected) {
-                appendUserMessage(selected.userText);
-                setTimeout(() => {
-                    appendBotMessage(selected.botHtml);
+            if (category.id === 'general') {
+                if (!userText) appendUserMessage(category.label);
+                setSpecialist('Consulta General');
+                if (userText) prefillMessage(userText, true);
+
+                setTimeout(function () {
+                    appendBotMessage(`
+                        <p><strong>Otro / Consulta general</strong></p>
+                        <p>${userText ? 'Tomé tu consulta tal como la escribiste. ' : ''}Contanos tu caso en el formulario y lo derivamos a la especialista correspondiente.</p>
+                        <p class="text-[11px] text-slate-400">Si querés, escribí tu caso acá y te ayudo a encontrar el área más adecuada.</p>
+                        <a href="#contacto" data-especialista="Consulta General" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                            Completar consulta
+                        </a>
+                        <button type="button" onclick="appendMainMenu()" class="text-champagne-300 hover:text-champagne-400 text-[11px] font-medium text-left">← Volver a las áreas</button>
+                    `);
                 }, 300);
+                return;
             }
+
+            const topic = assistantTopics[category.id];
+            if (!topic) return;
+
+            appendUserMessage(category.label);
+            setTimeout(function () {
+                appendBotMessage(buildTopicMenu(topic, category.id));
+            }, 300);
         }
+
+        function handleAssistantTopic(categoryId, itemId, customText) {
+            const topic = assistantTopics[categoryId];
+            if (!topic) return;
+
+            const item = topic.items.find(function (entry) { return entry.id === itemId; });
+            if (!item) return;
+
+            const userText = (customText || '').trim();
+            const prefill = userText || item.question;
+            if (!userText) appendUserMessage(item.question);
+            setSpecialist(topic.specialist);
+            prefillMessage(prefill, Boolean(userText));
+
+            setTimeout(function () {
+                appendBotMessage(`
+                    <p><strong>${escapeHtml(item.label)}</strong></p>
+                    <p>Derivamos tu consulta a <strong>${escapeHtml(topic.specialist)}</strong>.</p>
+                    <p class="text-[11px] text-slate-400">${escapeHtml(topic.specialistInfo)}</p>
+                    <p>Ya precargamos el tema en el formulario. Completá tus datos y enviá la consulta:</p>
+                    <a href="#contacto" data-especialista="${escapeHtml(topic.specialist)}" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
+                        Completar consulta
+                    </a>
+                    <button type="button" onclick="appendMainMenu()" class="text-champagne-300 hover:text-champagne-400 text-[11px] font-medium text-left mt-1">← Volver a las áreas</button>
+                `);
+            }, 300);
+        }
+
+        renderInitialMenu();
 
         // Form Submit Simulation in Chat
         chatInputForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            ensureChatAudio();
             const text = chatInputField.value.trim();
             if (!text) return;
 
             appendUserMessage(text);
             chatInputField.value = '';
 
-            const num = parseInt(text);
-            if (num >= 1 && num <= 5) {
-                handleBotOption(num);
-            } else {
-                setTimeout(() => {
-                    appendBotMessage(`
-                        <p>He recibido tu consulta: "<em>${text}</em>".</p>
-                        <p>Para brindarte una respuesta precisa, por favor seleccioná una de las opciones del menú o escribí directamente a nuestra Secretaría:</p>
-                        <a href="mailto:consultas.amparointegral@gmail.com?subject=Consulta%20desde%20el%20sitio%20web&body=${encodeURIComponent('Hola, mi consulta es: ' + text)}" class="inline-flex items-center gap-1.5 gold-gradient-bg text-navy-950 px-3 py-2 rounded-lg font-bold text-[11px] uppercase tracking-wider mt-1">
-                            Contactar por email
-                        </a>
-                    `);
-                }, 400);
+            if (/^\d+$/.test(text)) {
+                const num = parseInt(text, 10);
+                if (num >= 1 && num <= assistantCategories.length) {
+                    handleBotOption(num);
+                } else {
+                    setTimeout(function () {
+                        appendBotMessage(`
+                            <p>Elegí un número del 1 al ${assistantCategories.length} o escribí tu caso con palabras.</p>
+                            <div class="space-y-2">${mainMenuButtonsHtml()}</div>
+                        `);
+                    }, 400);
+                }
+                return;
+            }
+
+            handleFreeText(text);
+        });
+
+        // Sugerencias del asistente y cierre al ir al formulario
+        chatMessages.addEventListener('click', function (e) {
+            const suggestion = e.target.closest('[data-suggest-category]');
+            if (suggestion) {
+                handleAssistantTopic(
+                    suggestion.getAttribute('data-suggest-category'),
+                    suggestion.getAttribute('data-suggest-item'),
+                    suggestion.getAttribute('data-user-text') || ''
+                );
+                return;
+            }
+
+            const otherButton = e.target.closest('[data-other-text]');
+            if (otherButton) {
+                handleOtherOption(otherButton.getAttribute('data-other-text') || '');
+                return;
+            }
+
+            const contactLink = e.target.closest('a[href="#contacto"]');
+            if (contactLink && !chatBox.classList.contains('hidden')) {
+                toggleChat();
             }
         });
     </script>
